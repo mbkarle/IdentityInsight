@@ -7,3 +7,6 @@ var app = express();
 
 /*----------Define Endpoints----------*/
 endpoints(app);
+
+/*----------Launch on 8080----------*/
+app.listen(8080);

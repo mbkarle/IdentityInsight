@@ -13,7 +13,9 @@ def main():
     known_encodings = []
     known_names = []
 
-    for filename in os.listdir("./images"):
+    for filename in os.listdir("./images"): 
+        if filename.startswith("."): #ignore .ds_store and other hiddens
+            continue
         image_file = fr.load_image_file("./images/" + filename)
         image_encodings = fr.face_encodings(image_file)[0]
         known_encodings.append(image_encodings)
@@ -72,6 +74,7 @@ def main():
         #display
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
+            print(face_names[0])
             break
     video_capture.release()
     cv2.destroyAllWindows()

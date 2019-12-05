@@ -12,8 +12,9 @@ const spawn = require("child_process").spawn;
 /*----------Define functions to be called----------*/
 function recognize(req, res) {
     console.log("I'm gay");
-    var process = spawn('python', ['./lukeyDukey69.py', req.image]);
+    var process = spawn('python3', ['./lukeyDukey69.py']);
     process.stdout.on('data', function(data) {
         console.log(data.toString());
     });
+    res.send("//ye");
 }

@@ -1,0 +1,23 @@
+{
+  "name": "identityinsight",
+  "version": "1.0.0",
+  "description": "Facial Recognition Accessibility tool",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbkarle/IdentityInsight.git"
+  },
+  "author": "Matt Karle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbkarle/IdentityInsight/issues"
+  },
+  "homepage": "https://github.com/mbkarle/IdentityInsight#readme",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "express": "^4.17.1"
+  }
+}

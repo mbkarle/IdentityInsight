@@ -1,4 +1,4 @@
-import cv2
+#import cv2
 import face_recognition as fr
 import numpy as np
 import os
@@ -31,8 +31,8 @@ def main():
         frame = fr.load_image_file("./captured_frames/" + fname)
         RESIZE = 2
         #resize for faster processing
-        small_frame = cv2.resize(frame, (0,0), fx=1/RESIZE, fy=1/RESIZE)
-        rgb_small = small_frame[:, :, ::-1]
+#        small_frame = cv2.resize(frame, (0,0), fx=1/RESIZE, fy=1/RESIZE)
+        rgb_small = frame[:, :, ::-1]
 
         #process every few frames
         n = 1

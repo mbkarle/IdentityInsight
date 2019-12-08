@@ -1,7 +1,11 @@
-#import cv2
+import cv2
 import face_recognition as fr
 import numpy as np
 import os
+import image_to_numpy as im_np
+#from PIL import ImageFile
+
+#ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 #-----------Based on ageitgey/face_recognition demo-----------#
 
@@ -28,11 +32,12 @@ def main():
     for fname in os.listdir("./captured_frames"):
         if fname.startswith("."): #ignore .ds_store and other hiddens
             continue
-        frame = fr.load_image_file("./captured_frames/" + fname)
+        frame = im_np.load_image_file("./captured_frames/" + fname)
+        #frame = fr.load_image_file("./captured_frames/" + fname)
         RESIZE = 2
         #resize for faster processing
-#        small_frame = cv2.resize(frame, (0,0), fx=1/RESIZE, fy=1/RESIZE)
-        rgb_small = frame[:, :, ::-1]
+        small_frame = cv2.resize(frame, (0,0), fx=1/RESIZE, fy=1/RESIZE)
+        rgb_small = small_frame[:, :, ::-1]
 
         #process every few frames
         n = 1
@@ -55,7 +60,17 @@ def main():
                 if not (name in face_names):
                     face_names.append(name)
         process_frame += 1
-    for name in face_names:
-        print(name)
-
+    tot_names = len(face_names)
+    if tot_names > 0:
+        response = "I have found "
+        c = 1
+        for name in face_names:
+            response += name
+            if c < tot_names:
+                response += " and "
+            c += 1
+        print(response)
+    else:
+        print("I have found no one")
+        
 main()

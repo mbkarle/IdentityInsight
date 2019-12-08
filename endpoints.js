@@ -2,6 +2,8 @@
 const spawn = require("child_process").spawn;
 const multer = require('multer');
 const upload = multer({dest: __dirname + '/captured_frames'});
+const fs = require('fs');
+const path = require('path');
 
 /*----------Export Function----------*/
 module.exports = function(app) {
@@ -16,29 +18,32 @@ module.exports = function(app) {
 
 /*----------Define functions to be called----------*/
 function recognize(req, res) {
-    console.log("I'm gay");
     var process = spawn('python3', ['./recognize.py']);
     process.stdout.on('data', function(data) {
         console.log(data.toString());
+	res.send(data.toString());
+	deleteFiles();
     });
-    res.send("//ye");
+}
+
+function deleteFiles(){
+    const directory = "./captured_frames";
+    fs.readdir(directory, (err, files) => {
+        if (err) throw err;
+
+        for (const file of files) {
+            fs.unlink(path.join(directory, file), err => {
+                if (err) throw err;
+            });
+        }
+    });
 }
 
 function uploadRes(req, res) {
-	/*
-    var propValue;
-    for(var propName in req) {
-        propValue = req[propName]
-
-        console.log(propName,propValue);
-    }*/
-    /*console.log(req.file);
-    res.json(req.file);*/
-    console.log(req.file);
-    console.log(req.body);
     if(req.file) {
 	console.log("got file");
-        res.json(req.file);
+	recognize(req, res);
+	
     }
     else throw 'error';
     

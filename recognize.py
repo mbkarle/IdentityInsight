@@ -3,9 +3,6 @@ import face_recognition as fr
 import numpy as np
 import os
 import image_to_numpy as im_np
-#from PIL import ImageFile
-
-#ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 #-----------Based on ageitgey/face_recognition demo-----------#
 
@@ -33,7 +30,6 @@ def main():
         if fname.startswith("."): #ignore .ds_store and other hiddens
             continue
         frame = im_np.load_image_file("./captured_frames/" + fname)
-        #frame = fr.load_image_file("./captured_frames/" + fname)
         RESIZE = 2
         #resize for faster processing
         small_frame = cv2.resize(frame, (0,0), fx=1/RESIZE, fy=1/RESIZE)

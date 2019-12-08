@@ -84,7 +84,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7D7738562399940600E76611 /* testtttt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testtttt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D7738562399940600E76611 /* IdentityInsight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdentityInsight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7738592399940600E76611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D77385B2399940600E76611 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7D77385D2399940600E76611 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		7D7738572399940600E76611 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D7738562399940600E76611 /* testtttt.app */,
+				7D7738562399940600E76611 /* IdentityInsight.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,9 +163,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D7738552399940600E76611 /* testtttt */ = {
+		7D7738552399940600E76611 /* IdentityInsight */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D77386A2399940700E76611 /* Build configuration list for PBXNativeTarget "testtttt" */;
+			buildConfigurationList = 7D77386A2399940700E76611 /* Build configuration list for PBXNativeTarget "IdentityInsight" */;
 			buildPhases = (
 				7D7738522399940600E76611 /* Sources */,
 				7D7738532399940600E76611 /* Frameworks */,
@@ -176,9 +176,9 @@
 			);
 			dependencies = (
 			);
-			name = testtttt;
+			name = IdentityInsight;
 			productName = testtttt;
-			productReference = 7D7738562399940600E76611 /* testtttt.app */;
+			productReference = 7D7738562399940600E76611 /* IdentityInsight.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +196,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7D7738512399940600E76611 /* Build configuration list for PBXProject "testtttt" */;
+			buildConfigurationList = 7D7738512399940600E76611 /* Build configuration list for PBXProject "IdentityInsight" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -215,7 +215,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				7D7738552399940600E76611 /* testtttt */,
+				7D7738552399940600E76611 /* IdentityInsight */,
 			);
 		};
 /* End PBXProject section */
@@ -445,7 +445,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bigballedboys.testtttt;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IdentityInsight;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,7 +464,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bigballedboys.testtttt;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IdentityInsight;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -473,7 +473,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D7738512399940600E76611 /* Build configuration list for PBXProject "testtttt" */ = {
+		7D7738512399940600E76611 /* Build configuration list for PBXProject "IdentityInsight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D7738682399940700E76611 /* Debug */,
@@ -482,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D77386A2399940700E76611 /* Build configuration list for PBXNativeTarget "testtttt" */ = {
+		7D77386A2399940700E76611 /* Build configuration list for PBXNativeTarget "IdentityInsight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D77386B2399940700E76611 /* Debug */,
